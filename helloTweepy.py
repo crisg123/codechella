@@ -8,9 +8,7 @@ consumer_key = config.api_key
 consumer_secret = config.api_secret
 access_token = config.access_token 
 access_token_secret = config.token_secret 
-
-
-
+plant_api_key = config.plant_api_key
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token,access_token_secret)
@@ -23,7 +21,7 @@ def identify_plant(file_names):
 
     # see the docs for more optional attributes
     params = {
-        "api_key": "PT2LRnZuDENCCzD6Vl8u3V4FboW01gk9XAzuNpC7WoIPmybWe6",
+        "api_key": plant_api_key,
         "images": images,
         "modifiers": ["crops_fast", "similar_images"],
         "plant_language": "en",
