@@ -61,20 +61,17 @@ class MyStreamListener(tweepy.StreamListener):
     def on_status(self, status):
         media_files = set()
         media = status.entities.get('media', [])
+        id = status.id
+        screenName = status.user.screen_name
         if len(media) > 0:
             media_files.add(media[0]['media_url'])
+        print(media_files)
         for media_file in media_files:
             wget.download(media_file)
             name = media_file.split("/")[-1]
             files = [name]
-            print(name)
-            tweet = identify_plant(files)
-
-
-
-GEOBOX_YELLOWSTONE = [-114.3918577631, 35.2967854734, -103.74610581, 45.6655362056]
-GEOBOX_GREAT_SMOKY_MOUNTAIN = [-83.5644178449, 35.5573063495, -83.4257154523, 35.6457970655]
-GEOBOX_GERMANY = [5.0770049095, 47.2982950435, 15.0403900146, 54.9039819757]
+            tweet = "@" + screenName + " " + identify_plant(files)
+            api.update_status(status=tweet, in_reply_to_status_id=id)
 
 sapi = tweepy.streaming.Stream(auth, MyStreamListener())
-sapi.filter(track=["#plant", "#plants", "#tree", "#trees", "#flower", "#flowers", "#Gardening", "#nature"])
+sapi.filter(track=["#RandomPlantThings"])
