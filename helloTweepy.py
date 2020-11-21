@@ -2,10 +2,16 @@ import tweepy
 import wget
 import base64
 import requests
+import config
 
-auth = tweepy.OAuthHandler("sZ6tAowV11qMoX09iPg0wIaOG", "ojppuK9SjKpO4zNALC0i3WgZJZjauiDL6z3l83NthRbM2WovIf")
-auth.set_access_token("1888484838-eMcre7hbsacQWNF2CAadXsr1TVUDV6aOEQvY5Cs",
-                      "5R5i4hLTgDPeoIvAk2AJ5061aVM7Fp0g7UfwpwiBLPzZl")
+consumer_key = config.api_key 
+consumer_secret = config.api_secret
+access_token = config.access_token 
+access_token_secret = config.token_secret 
+plant_api_key = config.plant_api_key
+
+auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+auth.set_access_token(access_token,access_token_secret)
 
 api = tweepy.API(auth)
 
@@ -15,7 +21,7 @@ def identify_plant(file_names):
 
     # see the docs for more optional attributes
     params = {
-        "api_key": "PT2LRnZuDENCCzD6Vl8u3V4FboW01gk9XAzuNpC7WoIPmybWe6",
+        "api_key": plant_api_key,
         "images": images,
         "modifiers": ["crops_fast", "similar_images"],
         "plant_language": "en",
@@ -55,20 +61,17 @@ class MyStreamListener(tweepy.StreamListener):
     def on_status(self, status):
         media_files = set()
         media = status.entities.get('media', [])
+        id = status.id
+        screenName = status.user.screen_name
         if len(media) > 0:
             media_files.add(media[0]['media_url'])
+        print(media_files)
         for media_file in media_files:
             wget.download(media_file)
             name = media_file.split("/")[-1]
             files = [name]
-            print(name)
-            tweet = identify_plant(files)
-
-
-
-GEOBOX_YELLOWSTONE = [-114.3918577631, 35.2967854734, -103.74610581, 45.6655362056]
-GEOBOX_GREAT_SMOKY_MOUNTAIN = [-83.5644178449, 35.5573063495, -83.4257154523, 35.6457970655]
-GEOBOX_GERMANY = [5.0770049095, 47.2982950435, 15.0403900146, 54.9039819757]
+            tweet = "@" + screenName + " " + identify_plant(files)
+            api.update_status(status=tweet, in_reply_to_status_id=id)
 
 sapi = tweepy.streaming.Stream(auth, MyStreamListener())
-sapi.filter(track=["#plant", "#plants", "#tree", "#trees", "#flower", "#flowers", "#Gardening", "#nature"])
+sapi.filter(track=["#RandomPlantThings"])
