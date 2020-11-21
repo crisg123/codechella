@@ -2,10 +2,18 @@ import tweepy
 import wget
 import base64
 import requests
+import config
 
-auth = tweepy.OAuthHandler("sZ6tAowV11qMoX09iPg0wIaOG", "ojppuK9SjKpO4zNALC0i3WgZJZjauiDL6z3l83NthRbM2WovIf")
-auth.set_access_token("1888484838-eMcre7hbsacQWNF2CAadXsr1TVUDV6aOEQvY5Cs",
-                      "5R5i4hLTgDPeoIvAk2AJ5061aVM7Fp0g7UfwpwiBLPzZl")
+consumer_key = config.api_key 
+consumer_secret = config.api_secret
+access_token = config.access_token 
+access_token_secret = config.token_secret 
+
+
+
+
+auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+auth.set_access_token(access_token,access_token_secret)
 
 api = tweepy.API(auth)
 
