@@ -1,25 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
 import Carousel from './Carousel';
+import vid from './video.mp4'
 
 function App() {
+
   return (
     <div className="App">
       <Carousel />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <video autoPlay muted loop id="myVideo"
+        style={{position:'fixed', right:0, bottom:0, minWidth:'100%', minHeight:'100%', zIndex:-1}}>
+        <source src={vid}
+      type='video/mp4'/></video>
     </div>
   );
 }

@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="01c99f0b-3b34-4433-9825-26ca8d823cee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/site/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/site/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/site/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/site/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/App.js" afterDir="false" />
     </list>
@@ -41,11 +39,19 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/web-project-team_e" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/site/src" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\super\PycharmProjects\codechella\site\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\super\PycharmProjects\codechella\site\src" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -73,7 +79,8 @@
       <option name="presentableId" value="Default" />
       <updated>1605921770292</updated>
       <workItem from="1605921771382" duration="1181000" />
-      <workItem from="1605922961220" duration="5663000" />
+      <workItem from="1605922961220" duration="5879000" />
+      <workItem from="1606020128630" duration="12956000" />
     </task>
     <task id="LOCAL-00001" summary="create react app">
       <created>1605922462790</created>
@@ -96,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605923002722</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Working carousel">
+      <created>1605928661664</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1605928661664</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,41 +132,46 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="create react app" />
     <MESSAGE value="configs" />
-    <option name="LAST_COMMIT_MESSAGE" value="configs" />
+    <MESSAGE value="Working carousel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working carousel" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="395" y="81" key="CommitChangelistDialog2" timestamp="1605923002195">
+    <state x="524" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606022587945">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="395" y="81" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1605923002195" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1605924481939">
+    <state x="524" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1606022587945" />
+    <state x="395" y="81" key="CommitChangelistDialog2" timestamp="1605928660305">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605924481939" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1605924481939">
+    <state x="395" y="81" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1605928660305" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1606028155970">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605924481939" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1605924481939">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606028155970" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1606028155970">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605924481939" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1605924481939">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606028155970" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1606028155970">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605924481939" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606028155970" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1606028155970">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606028155970" />
     <state x="407" y="174" key="MultipleFileMergeDialog" timestamp="1605923028973">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1605923028973" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1605923052028">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1605928691540">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605923052028" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605922491259">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605928691540" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606020155974">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1605922491259" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1606020155974" />
     <state x="478" y="116" width="579" height="592" key="find.popup" timestamp="1605924471079">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
