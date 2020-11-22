@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './App.module.css';
+//import styles from './App.module.css';
 import {Line, Bar} from 'react-chartjs-2';
 import axios from 'axios';
 class App extends React.Component {
