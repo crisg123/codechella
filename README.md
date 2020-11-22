@@ -1,2 +1,2 @@
 # codechella
-![Screenshot](codechella/Top10AnimeBetrayal.png)
+![Screenshot](Top10AnimeBetrayal.png)
